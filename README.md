@@ -22,12 +22,3 @@ Run these commands to create yaml file for the aws-auth config map and deploy it
 terraform output config-map-aws-auth > config-map-aws-auth.yaml  
 kubectl apply -f config-map-aws-auth.yaml  
 ```
-
-## Issues:
-
-### Joining Workers to the cluster: 
-**Problem**: 
-Worker nodes could not join to the EKS cluster. Checked Security Groups if Cluster SG and Worker SG allow connection to each other. Checked IAM roles if they have necessary permission. Checked "bootstrap.sh" script by ssh to the worker node and checking the logs, manually run the script. All of the previous examinations were passed. Finally, the issue was that worker nodes must have been created with Public IPV4 if they are deployed in Public Subnet or NAT Gateway if they were created in Private Subnet.
-
-**Solution**:
-Changed Terraform code to include Auto-Assignment of public IPV4 upon creation.
