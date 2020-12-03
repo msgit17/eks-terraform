@@ -1,6 +1,6 @@
 # Create EKS cluster with Terraform
 
-"Eks-cluster" folder contains necessary files to create EKS cluster with Terraform. By running below commands terraform creates all the required infrastructure to spin up EKS cluster (VPC, IAM roles, Autoscaling Group, Launch Template, etc.) Before executing the below scripts the user must be authenticated in account in which he wants EKS Cluster to be created.
+This repository contains necessary files to create EKS cluster with Terraform. By running below commands terraform creates all the required infrastructure to spin up EKS cluster (VPC, IAM roles, Autoscaling Group, Launch Template, etc.) Before executing the below scripts the user must be authenticated in account in which he wants EKS Cluster to be created.
 
  ### Prerequisite: 
   -   configured AWS CLI
